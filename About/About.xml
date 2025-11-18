@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>[1001] Mech Blink Upgrade</name>
+	<author>papercrane1001 (current)</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+  <packageId>mechupgrades.papercrane.rw</packageId>
+	<description>
+  </description>
+  <url></url>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>brrainz.harmony</li>
+    <li>GoGaTio.MechanoidUpgrades</li>
+  </loadAfter>
+  <modDependencies>
+    <li>
+      <packageId>GoGaTio.MechanoidUpgrades</packageId>
+      <displayName>Mechanoid Upgrades</displayName>
+      <downloadUrl></downloadUrl>
+    </li>
+  </modDependencies>
+</ModMetaData>
