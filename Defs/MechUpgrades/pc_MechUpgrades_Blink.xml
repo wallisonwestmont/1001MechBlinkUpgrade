@@ -60,12 +60,17 @@
 	<linkedThingDef>PC_BlinkUpgradeThing</linkedThingDef>
 	<upgradePoints>2</upgradePoints>
 	<commonality>1</commonality>
-	<comps>
+	
+	<descriptionHyperlinks>
+      <HediffDef>PC_AutoBlinkHediff</HediffDef>
+    </descriptionHyperlinks>
+	<!-- <HediffDef>PC_AutoBlinkHediff</HediffDef> -->
+	<!-- <comps>
         <li Class="MU.UpgradeCompProperties_ApplyHediff">
             <hediffDef>PC_AutoBlinkHediff</hediffDef>
             <removeHediffOnUpgradeRemoval>true</removeHediffOnUpgradeRemoval>
         </li>
-    </comps>
+    </comps> -->
 
   
   </MU.MechUpgradeDef>
