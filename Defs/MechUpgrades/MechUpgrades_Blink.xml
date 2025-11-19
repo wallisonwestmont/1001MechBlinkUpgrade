@@ -1,5 +1,10 @@
 <Defs>
 	<ThingDef ParentName="MU_MechUpgradeItemBase" Name="PC_MechUpgradeItem" Abstract="True">
+	<comps>
+      <li Class="MU.CompProperties_MechUpgrade">
+	  <upgradeDef>PC_BlinkUpgradeUpgrade</upgradeDef>
+	  </li>
+    </comps>
 		<graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1, 1)</drawSize>

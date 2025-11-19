@@ -1,0 +1,17 @@
+Root level exception in OnGUI(): System.NullReferenceException: Object reference not set to an instance of an object
+[Ref 2B03FFA1]
+  at MU.MechUpgradeUtility.MakeUpgrade (MU.MechUpgradeDef def, Verse.Pawn startingHolder) [0x00001] in <d96d65c85ca6422a88b6d9e99ffe8973>:0 
+  at MU.MechUpgradeUtility.MakeUpgrade (MU.MechUpgradeDef def) [0x00001] in <d96d65c85ca6422a88b6d9e99ffe8973>:0 
+  at MU.CompMechUpgrade.PostPostMake () [0x0001d] in <d96d65c85ca6422a88b6d9e99ffe8973>:0 
+  at Verse.ThingWithComps.PostMake () [0x00024] in <46372f5dadbf4af8939e608076251180>:0 
+  at Verse.ThingMaker.MakeThing (Verse.ThingDef def, Verse.ThingDef stuff) [0x00103] in <46372f5dadbf4af8939e608076251180>:0 
+  at Verse.DebugThingPlaceHelper.DebugSpawn (Verse.ThingDef def, Verse.IntVec3 c, System.Int32 stackCount, System.Boolean direct, Verse.ThingStyleDef thingStyleDef, System.Boolean canBeMinified, System.Nullable`1[T] wipeMode) [0x00047] in <46372f5dadbf4af8939e608076251180>:0 
+  at Verse.DebugThingPlaceHelper+<>c__DisplayClass2_1.<TryPlaceOptionsForStackCount>b__1 () [0x0000b] in <46372f5dadbf4af8939e608076251180>:0 
+  at LudeonTK.DebugTool.DebugToolOnGUI () [0x00018] in <46372f5dadbf4af8939e608076251180>:0 
+  at LudeonTK.DebugTools.DebugToolsOnGUI () [0x00007] in <46372f5dadbf4af8939e608076251180>:0 
+  at RimWorld.UIRoot_Play.UIRootOnGUI () [0x000c8] in <46372f5dadbf4af8939e608076251180>:0 
+  at Verse.Root.OnGUI () [0x00046] in <46372f5dadbf4af8939e608076251180>:0 
+    - POSTFIX UnlimitedHugs.HugsLib: Void HugsLib.Patches.Root_OnGUI_Patch:OnGUIHookUnfiltered()
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+Verse.Log:Error (string)
+(wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition:Verse.Root.OnGUI_Patch1 (Verse.Root)

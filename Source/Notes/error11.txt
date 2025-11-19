@@ -1,0 +1,12 @@
+Exception filling window for LudeonTK.Dialog_DebugOptionListLister: System.NullReferenceException: Object reference not set to an instance of an object
+[Ref EFD72E]
+  at MU.MechUpgradeUtility.ItemFromUpgrade (MU.MechUpgrade u) [0x00019] in <d96d65c85ca6422a88b6d9e99ffe8973>:0 
+  at MU.MechUpgradeUtility+<>c__DisplayClass24_1.<DEV_AddUpgrade>b__0 () [0x0003f] in <d96d65c85ca6422a88b6d9e99ffe8973>:0 
+  at LudeonTK.Dialog_DebugOptionLister.DebugAction (System.String label, System.Single columnWidth, System.Action action, System.Boolean highlight) [0x00020] in <46372f5dadbf4af8939e608076251180>:0 
+  at LudeonTK.Dialog_DebugOptionListLister.DoListingItems (UnityEngine.Rect inRect, System.Single columnWidth) [0x0005c] in <46372f5dadbf4af8939e608076251180>:0 
+  at LudeonTK.Dialog_OptionLister.DoWindowContents (UnityEngine.Rect inRect) [0x0016c] in <46372f5dadbf4af8939e608076251180>:0 
+  at Verse.Window.InnerWindowOnGUI (System.Int32 x) [0x001a6] in <46372f5dadbf4af8939e608076251180>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+Verse.Log:Error (string)
+Verse.Window:InnerWindowOnGUI (int)
+UnityEngine.GUI:CallWindowDelegate (UnityEngine.GUI/WindowFunction,int,int,UnityEngine.GUISkin,int,single,single,UnityEngine.GUIStyle)
