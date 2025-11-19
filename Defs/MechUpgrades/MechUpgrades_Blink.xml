@@ -1,5 +1,5 @@
 <Defs>
-	<ThingDef ParentName="MU_MechUpgradeItemBase" Name="PC_MechUpgradeItem" "Abstract="True">
+	<ThingDef ParentName="MU_MechUpgradeItemBase" Name="PC_MechUpgradeItem" Abstract="True">
 		<graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1, 1)</drawSize>
@@ -21,7 +21,6 @@
     </tradeTags>
     <costList>
       <Uranium>20</Uranium>
-
 	  <Plasteel>40</Plasteel>
 	  <Silver>40</Silver>
      <Gold>10</Gold>
@@ -32,7 +31,7 @@
   <ThingDef ParentName="PC_MechUpgradeItem">
 	<defName>PC_BlinkUpgradeThing</defName>
 	<label>Blink chip</label>
-	<description>placeholder description<description>
+	<description>placeholder description</description>
 	<graphicData>
 		<texPath>Things/Item/PC_BlinkUpgrade</texPath>
 	</graphicData>
@@ -41,6 +40,7 @@
       <Mass>5</Mass>
       <MarketValue>5100</MarketValue>
     </statBases>
+	
 	</ThingDef>
   
   
@@ -49,115 +49,81 @@
 	<defName>PC_BlinkUpgradeUpgrade</defName>
 	<label>blink teleporter</label>
 	<description>blink teleporter that can be installed into a mechanoid</description>
+	<uiIconPath>Things/Item/PC_BlinkUpgrade</uiIconPath>
 	<linkedThingDef>PC_BlinkUpgradeThing</linkedThingDef>
-  
 	<upgradePoints>2</upgradePoints>
-  
+	<commonality>1</commonality>
 	<modExtensions>
-			<li Class="AutoBlink.GeneExtension_AutoBlink">
-				<!-- Minimum distance required to trigger blink (initial default).
-				If the target is closer than this, no blink will occur.
-				This initial value is adjustable via a gizmo slider in-game. -->
-				<minDistanceToBlink>10</minDistanceToBlink>
+    <li Class="AutoBlink.GeneExtension_AutoBlink">
+        <minDistanceToBlink>10</minDistanceToBlink>
+        <maxDistanceToBlink>60</maxDistanceToBlink>
+        <blinkIntervalTicks>180</blinkIntervalTicks>
+        <delayAfterEligibleTicks>60</delayAfterEligibleTicks>
+        <cellsBeforeTarget>3</cellsBeforeTarget>
+        <postBlinkStanceTicks>10</postBlinkStanceTicks>
+        <defaultAutoBlinkDrafted>false</defaultAutoBlinkDrafted>
+        <defaultAutoBlinkIdle>true</defaultAutoBlinkIdle>
+        <defaultJumpAsFarAsPossible>true</defaultJumpAsFarAsPossible>
+        <playerFactionOnly>false</playerFactionOnly>
+        <allowedJobDefs>
+          <li>AttackMelee</li>
+        </allowedJobDefs>
 
-				<!-- Maximum blink distance. -->
-				<maxDistanceToBlink>200</maxDistanceToBlink>
+        <!-- Optional: List of jobs that disable auto-blink.
+                Auto-blink will not trigger while performing any of the jobs listed here. -->
+        <excludedJobDefs>
+          <li>GotoWander</li>
+          <li>Carried</li>
+        </excludedJobDefs>
 
-				<!-- Cooldown between blinks, in ticks -->
-				<blinkIntervalTicks>120</blinkIntervalTicks>
+      <!-- ====== Gizmo settings ====== -->
+        <!-- If false, the gizmo button will be hidden.
+                Also disables interaction via multi-selection, and settings will be locked to what's defined in the Def. -->
+        <drawGizmo>true</drawGizmo>
 
-				<!-- Optional: Delay (in ticks) after determining blink eligibility before executing the blink.
-				If set to 0, blinking happens as soon as possible, but the check runs every 12 ticks for performance reasons,
-				so there will be a small inherent delay. -->
-				<delayAfterEligibleTicks>60</delayAfterEligibleTicks>
+        <!-- Optional: Label displayed on the gizmo button. If not set, AutoBlink.AutoBlink_Label will be used -->
+        <gizmoLabel>Teleport</gizmoLabel>
+        <!-- Optional: Path to the gizmo button icon -->
+        <gizmoIconPath>UI/Commands/AutoBlink</gizmoIconPath>
 
-				<!-- Optional: How many cells before the target to blink from.
-				In this example, blink 3 cells before the destination, then walk the final 3 cells.
-				If set to 0, blink directly to the destination cell. -->
-				<cellsBeforeTarget>2</cellsBeforeTarget>
+      <!-- ====== Sound and visual effect settings ====== -->
+        <!-- Effects played on the origin cell before blinking -->
+        <!-- SoundDefs -->
+        <preBlinkSoundDefs>
+          <li>AutoBlink_Skip_Small</li>
+        </preBlinkSoundDefs>
+        <!-- MoteDefs -->
+        <preBlinkMoteDefs>
+          <!-- leave empty if none -->
+        </preBlinkMoteDefs>
+        <!-- EffecterDefs -->
+        <preBlinkEffecterDefs>
+          <li>Skip_Entry</li>
+        </preBlinkEffecterDefs>
 
-				<!-- Optional: Stun duration after blink, in ticks -->
-				<postBlinkStanceTicks>10</postBlinkStanceTicks>
+        <!-- Effects played on the destination cell after blinking -->
+        <!-- SoundDefs -->
+        <postBlinkSoundDefs>
+          <li>AutoBlink_Skip_Exit_Small</li>
+        </postBlinkSoundDefs>
+        <!-- MoteDefs -->
+        <postBlinkMoteDefs>
+        </postBlinkMoteDefs>
+        <!-- EffecterDefs -->
+        <postBlinkEffecterDefs>
+          <li>Skip_ExitNoDelay</li>
+        </postBlinkEffecterDefs>
+      
 
-				<!-- Optional: Initial value for auto-blink while drafted or idle.
-				This is the initial value and can be changed from the gizmo detail window unless drawGizmo is set to false. -->
-				<defaultAutoBlinkDrafted>true</defaultAutoBlinkDrafted>
-				<defaultAutoBlinkIdle>true</defaultAutoBlinkIdle>
+    </li>
+	</modExtensions>
 
-				<!-- Optional: Initial value for Jump As Far As Possible.
-				This is the initial value and can be changed from the gizmo detail window unless drawGizmo is set to false.-->
-				<defaultJumpAsFarAsPossible>true</defaultJumpAsFarAsPossible>
-
-				<!-- Optional: If false, non-player faction pawns can use AutoBlink. Defaults to true if not specified -->
-				<playerFactionOnly>true</playerFactionOnly>
-
-				<!-- Optional: List of jobs that allow auto-blink.
-				When this list is used, auto-blink only triggers while performing listed jobs.
-				Use either this or excludedJobDefs, not both. Using both is not an error but unnecessary. -->
-				<!-- 
-				<allowedJobDefs>
-				<li>AttackMelee</li>
-				</allowedJobDefs>
-				-->
-
-				<!-- Optional: List of jobs that disable auto-blink.
-				Auto-blink will not trigger while performing any of the jobs listed here. -->
-				<excludedJobDefs>
-					<li>GotoWander</li>
-					<li>Carried</li>
-				</excludedJobDefs>
-
-				<!-- ====== Gizmo settings ====== -->
-				<!-- If false, the gizmo button will be hidden.
-				Also disables interaction via multi-selection, and settings will be locked to what's defined in the Def. -->
-				<drawGizmo>true</drawGizmo>
-
-				<!-- Optional: Label displayed on the gizmo button. If not set, AutoBlink.AutoBlink_Label will be used -->
-				<!-- <gizmoLabel>Teleport</gizmoLabel> -->
-				
-				
-				<!-- Optional: Path to the gizmo button icon -->
-				<gizmoIconPath>UI/Commands/AutoBlink</gizmoIconPath>
-
-
-
-				<!-- ====== Sound and visual effect settings ====== -->
-				<!-- Effects played on the origin cell before blinking -->
-				<!-- SoundDefs -->
-				<preBlinkSoundDefs>
-					<li>AutoBlink_Skip_Small</li>
-				</preBlinkSoundDefs>
-				
-				<!-- MoteDefs -->
-				<preBlinkMoteDefs>
-					<!-- leave empty if none -->
-				</preBlinkMoteDefs>
-				
-				<!-- EffecterDefs -->
-				<preBlinkEffecterDefs>
-					<li>Skip_Entry</li>
-				</preBlinkEffecterDefs>
-
-
-
-				<!-- Effects played on the destination cell after blinking -->
-				<!-- SoundDefs -->
-				<postBlinkSoundDefs>
-					<li>AutoBlink_Skip_Exit_Small</li>
-				</postBlinkSoundDefs>
-				
-				<!-- MoteDefs -->
-				<postBlinkMoteDefs>
-				</postBlinkMoteDefs>
-				
-				<!-- EffecterDefs -->
-				<postBlinkEffecterDefs>
-					<li>Skip_ExitNoDelay</li>
-				</postBlinkEffecterDefs>
-			</li>
-		</modExtensions>
   
   </MU.MechUpgradeDef>
+  
+  
+  
+  
   
   
 </Defs>
