@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defName>PC_AutoBlinkHediff</defName>
+        <label>Installed Blink Chip</label>
+        <description>Enables auto-blinking on the mechanoid.</description>
+        <isBad>false</isBad>
+        <scenarioCanAdd>false</scenarioCanAdd>
+
+        <comps>
+            <li Class="AutoBlink.HediffCompProperties_AutoBlink">
+                <minDistanceToBlink>10</minDistanceToBlink>
+                <maxDistanceToBlink>60</maxDistanceToBlink>
+                <blinkIntervalTicks>180</blinkIntervalTicks>
+                <delayAfterEligibleTicks>60</delayAfterEligibleTicks>
+                <cellsBeforeTarget>3</cellsBeforeTarget>
+                <postBlinkStanceTicks>10</postBlinkStanceTicks>
+                <defaultAutoBlinkDrafted>false</defaultAutoBlinkDrafted>
+                <defaultAutoBlinkIdle>true</defaultAutoBlinkIdle>
+                <defaultJumpAsFarAsPossible>true</defaultJumpAsFarAsPossible>
+                <playerFactionOnly>false</playerFactionOnly>
+                <allowedJobDefs>
+                    <li>AttackMelee</li>
+                </allowedJobDefs>
+                <excludedJobDefs>
+                    <li>GotoWander</li>
+                    <li>Carried</li>
+                </excludedJobDefs>
+                <drawGizmo>true</drawGizmo>
+                <gizmoLabel>Teleport</gizmoLabel>
+                <gizmoIconPath>UI/Commands/AutoBlink</gizmoIconPath>
+                <preBlinkSoundDefs>
+                    <li>AutoBlink_Skip_Small</li>
+                </preBlinkSoundDefs>
+                <preBlinkEffecterDefs>
+                    <li>Skip_Entry</li>
+                </preBlinkEffecterDefs>
+                <postBlinkSoundDefs>
+                    <li>AutoBlink_Skip_Exit_Small</li>
+                </postBlinkSoundDefs>
+                <postBlinkEffecterDefs>
+                    <li>Skip_ExitNoDelay</li>
+                </postBlinkEffecterDefs>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>
