@@ -46,8 +46,6 @@
       <MarketValue>5100</MarketValue>
     </statBases>
 	
-	
-	
 	</ThingDef>
   
   
@@ -66,10 +64,16 @@
   </descriptionHyperlinks>
 
 	<comps>
-        <li Class="MU.UpgradeCompProperties_ApplyHediff">
-            <hediffDef>PC_AutoBlinkHediff</hediffDef>
-            <removeHediffOnUpgradeRemoval>true</removeHediffOnUpgradeRemoval>
-        </li>
+        <li Class="MU.UpgradeCompProperties_HediffInRange">
+        <hediffDef>PC_AutoBlinkHediff</hediffDef>
+        <range>0.1</range>
+        <onlyTargetMechs>true</onlyTargetMechs>
+        <targetSelf>true</targetSelf>
+        <onlySameFaction>true</onlySameFaction>
+        <!-- optional UI glyph/text keys -->
+        <gismoTextKey>PC_BlinkUpgrade</gismoTextKey>
+        <gizmoTexPath>Things/Item/PC_BlinkUpgrade</gizmoTexPath>
+      </li>
     </comps>
 
     

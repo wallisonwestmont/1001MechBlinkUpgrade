@@ -9,14 +9,17 @@
         <scenarioCanAdd>false</scenarioCanAdd>
 
         <comps>
+            <li Class="HediffCompProperties_Disappears"></li>
             <li Class="AutoBlink.HediffCompProperties_AutoBlink">
-                <minDistanceToBlink>10</minDistanceToBlink>
-                <maxDistanceToBlink>60</maxDistanceToBlink>
+                <!-- <minDistanceToBlink>10</minDistanceToBlink> -->
+                <minDistanceToBlink>3</minDistanceToBlink>
+                <maxDistanceToBlink>600</maxDistanceToBlink>
                 <blinkIntervalTicks>180</blinkIntervalTicks>
                 <delayAfterEligibleTicks>60</delayAfterEligibleTicks>
-                <cellsBeforeTarget>3</cellsBeforeTarget>
+                <!-- <cellsBeforeTarget>3</cellsBeforeTarget> -->
+                <cellsBeforeTarget>1</cellsBeforeTarget>
                 <postBlinkStanceTicks>10</postBlinkStanceTicks>
-                <defaultAutoBlinkDrafted>false</defaultAutoBlinkDrafted>
+                <defaultAutoBlinkDrafted>true</defaultAutoBlinkDrafted>
                 <defaultAutoBlinkIdle>true</defaultAutoBlinkIdle>
                 <defaultJumpAsFarAsPossible>true</defaultJumpAsFarAsPossible>
                 <playerFactionOnly>false</playerFactionOnly>
