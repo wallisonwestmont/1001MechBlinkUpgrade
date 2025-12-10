@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\1001MechBlinkUpgrade\\Source\\MechBlinkUpgrade\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94AB283A-F027-441C-B8E4-0E8F9E103ACD}|MechBlinkUpgrade.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\1001mechblinkupgrade\\source\\mechblinkupgrade\\upgradecomp_addhedifflite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94AB283A-F027-441C-B8E4-0E8F9E103ACD}|MechBlinkUpgrade.csproj|solutionrelative:upgradecomp_addhedifflite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpgradeComp_AddHediffLite.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\1001MechBlinkUpgrade\\Source\\MechBlinkUpgrade\\UpgradeComp_AddHediffLite.cs",
+              "RelativeDocumentMoniker": "UpgradeComp_AddHediffLite.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\1001MechBlinkUpgrade\\Source\\MechBlinkUpgrade\\UpgradeComp_AddHediffLite.cs",
+              "RelativeToolTip": "UpgradeComp_AddHediffLite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T00:33:24.177Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

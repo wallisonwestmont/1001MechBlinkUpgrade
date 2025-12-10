@@ -14,12 +14,18 @@
     <li>Ludeon.RimWorld.Royalty</li>
     <li>brrainz.harmony</li>
     <li>GoGaTio.MechanoidUpgrades</li>
+	<li>rabiosus.autoblink</li>
   </loadAfter>
   <modDependencies>
     <li>
       <packageId>GoGaTio.MechanoidUpgrades</packageId>
       <displayName>Mechanoid Upgrades</displayName>
-      <downloadUrl></downloadUrl>
+      <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3365118555</downloadUrl>
+    </li>
+	<li>
+      <packageId>rabiosus.autoblink</packageId>
+      <displayName>AutoBlink</displayName>
+      <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3493889625</downloadUrl>
     </li>
   </modDependencies>
 </ModMetaData>
