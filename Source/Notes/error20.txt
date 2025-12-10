@@ -24,3 +24,6 @@ RimWorld.MapGizmoUtility:MapUIOnGUI ()
 RimWorld.MapInterface:MapInterfaceOnGUI_BeforeMainTabs ()
 RimWorld.UIRoot_Play:UIRootOnGUI ()
 (wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition:Verse.Root.OnGUI_Patch1 (Verse.Root)
+
+PC_BlinkUpgrade_Label
+PC_BlinkUpgrade_Desc

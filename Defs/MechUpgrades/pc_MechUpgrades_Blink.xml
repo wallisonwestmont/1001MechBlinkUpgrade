@@ -74,7 +74,7 @@
         <gismoTextKey>PC_BlinkUpgrade</gismoTextKey>
         <gizmoTexPath>Things/Item/PC_BlinkUpgrade</gizmoTexPath>
       </li>
-    </comps>
+  </comps>
 
     
   </MU.MechUpgradeDef>
